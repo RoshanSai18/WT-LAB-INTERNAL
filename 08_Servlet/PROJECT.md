@@ -1,21 +1,25 @@
-✅ 1. Setup Requirements
+## ✅ 1. Setup Requirements
 
 Make sure you have:
 
-Eclipse IDE (Enterprise / Dynamic Web)
-Apache Tomcat (configured in Eclipse)
-MySQL installed
-MySQL Connector JAR (add to project)
-✅ 2. Create Dynamic Web Project
-Open Eclipse
-File → New → Dynamic Web Project
-Name: BookApp
-Select Tomcat server
-Click Finish
-✅ 3. Create Database & Table
+- Eclipse IDE (Enterprise / Dynamic Web)
+- Apache Tomcat (configured in Eclipse)
+- MySQL installed
+- MySQL Connector JAR (add to project)
+
+## ✅ 2. Create Dynamic Web Project
+
+1. Open Eclipse
+2. File → New → Dynamic Web Project
+3. Name: BookApp
+4. Select Tomcat server
+5. Click Finish
+
+## ✅ 3. Create Database & Table
 
 Open MySQL and run:
 
+```sql
 CREATE DATABASE bookdb;
 
 USE bookdb;
@@ -31,21 +35,27 @@ INSERT INTO books(title, author, price) VALUES
 ('Java Basics', 'James Gosling', 500),
 ('Servlet Guide', 'Oracle Docs', 300),
 ('Data Science Intro', 'Andrew Ng', 700);
-✅ 4. Add MySQL Connector
-Download MySQL Connector JAR
-In Eclipse:
-Right-click project → Build Path
-Configure Build Path
-Add External JAR → select connector
-✅ 5. Create Servlet
+```
+
+## ✅ 4. Add MySQL Connector
+
+1. Download MySQL Connector JAR
+2. In Eclipse:
+   - Right-click project → Build Path
+   - Configure Build Path
+   - Add External JAR → select connector
+
+## ✅ 5. Create Servlet
+
 Package:
 
-com.book.servlet
+`com.book.servlet`
 
 Class:
 
-BookServlet.java
+`BookServlet.java`
 
+```java
 package com.book.servlet;
 
 import java.io.*;
@@ -94,10 +104,13 @@ public class BookServlet extends HttpServlet {
         }
     }
 }
-✅ 6. Configure web.xml
+```
+
+## ✅ 6. Configure web.xml
 
 Go to WEB-INF/web.xml
 
+```xml
 <web-app>
 
   <servlet>
@@ -111,8 +124,13 @@ Go to WEB-INF/web.xml
   </servlet-mapping>
 
 </web-app>
-✅ 7. Create HTML Page (Frame / UI)
+```
+
+## ✅ 7. Create HTML Page (Frame / UI)
+
 index.html
+
+```html
 <html>
 <head>
     <title>Book App</title>
@@ -124,7 +142,11 @@ index.html
 </frameset>
 
 </html>
+```
+
 menu.html
+
+```html
 <html>
 <body>
 
@@ -136,9 +158,14 @@ menu.html
 
 </body>
 </html>
-✅ 8. Run Project
-Right-click project → Run on Server
-Open:
+```
+
+## ✅ 8. Run Project
+
+1. Right-click project → Run on Server
+2. Open:
+
 http://localhost:8080/BookApp
-Click View Books
+3. Click View Books
+
 👉 Data will load in the content frame
