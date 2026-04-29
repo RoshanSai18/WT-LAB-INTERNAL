@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UserAccounts>
+
+    <User id="u84756">
+        <Profile>
+            <Username>space_reader99</Username>
+            <Email verified="true">space_reader99@example.com</Email>
+            <Password algorithm="argon2" salt="a8f9c2e4">$argon2id$v=19$m=16...</Password>
+        </Profile>
+        
+        <Interests>
+            <Interest>Science Fiction</Interest>
+            <Interest>Space Exploration</Interest>
+            <Interest>Technology</Interest>
+        </Interests>
+
+        <PurchaseHistory>
+            <Order orderId="ord-5592" date="2026-02-14" status="Delivered">
+                <Items>
+                    <Item bookId="bk101" quantity="1">The Martian</Item>
+                    <Item bookId="bk102" quantity="2">Dune</Item>
+                </Items>
+                <OrderTotal currency="USD">34.97</OrderTotal>
+            </Order>
+            
+            <Order orderId="ord-6104" date="2026-03-01" status="Processing">
+                <Items>
+                    <Item bookId="bk103" quantity="1">Good Omens</Item>
+                </Items>
+                <OrderTotal currency="USD">12.50</OrderTotal>
+            </Order>
+        </PurchaseHistory>
+    </User>
+    <User id="u84757">
+        <Profile>
+            <Username>fantasy_fanatic</Username>
+            <Email verified="false">new_user123@example.com</Email>
+            <Password algorithm="argon2" salt="b3d4e5f6">$argon2id$v=19$m=16...</Password>
+        </Profile>
+        <Interests>
+            <Interest>Fantasy</Interest>
+            <Interest>Mythology</Interest>
+        </Interests>
+        <PurchaseHistory>
+            <Order orderId="ord-6105" date="2026-03-02" status="Pending">
+                <Items>
+                    <Item bookId="bk103" quantity="1">Good Omens</Item>
+                </Items>
+                <OrderTotal currency="USD">12.50</OrderTotal>
+            </Order>
+        </PurchaseHistory>
+    </User>
+
+</UserAccounts>

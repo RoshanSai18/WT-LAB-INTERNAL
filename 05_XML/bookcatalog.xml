@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BookCatalog>
+    
+    <Book id="bk101">
+        <Title>The Martian</Title>
+        <Author>Andy Weir</Author>
+        <Genre>Science Fiction</Genre>
+        <Price currency="USD">14.99</Price>
+        <Availability status="In Stock">
+            <Quantity>42</Quantity>
+        </Availability>
+    </Book>
+
+    <Book id="bk102">
+        <Title>Dune</Title>
+        <Author>Frank Herbert</Author>
+        <Genre>Science Fiction</Genre>
+        <Price currency="USD">9.99</Price>
+        <Availability status="Out of Stock">
+            <Quantity>0</Quantity>
+        </Availability>
+    </Book>
+
+    <Book id="bk103">
+        <Title>Good Omens</Title>
+        <Author>Terry Pratchett</Author>
+        <Author>Neil Gaiman</Author>
+        <Genre>Fantasy</Genre>
+        <Price currency="USD">12.50</Price>
+        <Availability status="Pre-order">
+            <Quantity>100</Quantity>
+        </Availability>
+    </Book>
+
+</BookCatalog>

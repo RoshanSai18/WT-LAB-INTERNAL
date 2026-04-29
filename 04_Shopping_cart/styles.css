@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+#books{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+    
+}
+.book {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,67 @@
+<style>
+    /* Basic layout for frames simulation */
+    .container { display: flex; border: 1px solid #ccc; height: 300px; }
+    .nav-frame { width: 30%; background: #f4f4f4; padding: 20px; border-right: 1px solid #ddd; }
+    .content-frame { width: 70%; padding: 20px; }
+    .book-link { display: block; margin-bottom: 10px; cursor: pointer; color: blue; text-decoration: underline; }
+</style>
+
+<h3>Bookstore Browser</h3>
+<div class="container">
+    <div class="nav-frame">
+        <h4>Book List</h4>
+        <span class="book-link" onclick="loadBook(1)">The Great Gatsby</span>
+        <span class="book-link" onclick="loadBook(2)">1984</span>
+        <span class="book-link" onclick="loadBook(3)">JavaScript: The Good Parts</span>
+    </div>
+
+    <div class="content-frame" id="bookDisplay">
+        <p>Select a book from the menu to see details.</p>
+    </div>
+</div>
+
+<script>
+    // Data Source (simulating a JSON response from a server)
+    const library = [
+        {
+            id: 1,
+            title: "The Great Gatsby",
+            author: "F. Scott Fitzgerald",
+            price: "$10.99",
+            description: "A novel set in the Jazz Age that tells the story of Jay Gatsby."
+        },
+        {
+            id: 2,
+            title: "1984",
+            author: "George Orwell",
+            price: "$12.50",
+            description: "A dystopian social science fiction novel and cautionary tale."
+        },
+        {
+            id: 3,
+            title: "JavaScript: The Good Parts",
+            author: "Douglas Crockford",
+            price: "$25.00",
+            description: "A deep dive into the best features of the JavaScript language."
+        }
+    ];
+
+    function loadBook(bookId) {
+        // 1. Find the book object in the array
+        const book = library.find(b => b.id === bookId);
+        
+        // 2. Target the content frame
+        const display = document.getElementById('bookDisplay');
+
+        // 3. Dynamically update the HTML
+        if (book) {
+            display.innerHTML = `
+                <h2 style="margin-top:0;">${book.title}</h2>
+                <p><strong>Author:</strong> ${book.author}</p>
+                <p><strong>Price:</strong> ${book.price}</p>
+                <p><em>${book.description}</em></p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+            `;
+        }
+    }
+</script>
