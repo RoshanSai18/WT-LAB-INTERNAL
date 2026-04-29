@@ -131,16 +131,20 @@ Go to WEB-INF/web.xml
 index.html
 
 ```html
+<!DOCTYPE html>
 <html>
 <head>
     <title>Book App</title>
 </head>
+<body>
 
-<frameset rows="20%,80%">
-    <frame src="menu.html">
-    <frame name="contentFrame">
-</frameset>
+<h2>Book Application</h2>
 
+    <iframe src="menu.html" width="100%" height="500px"></iframe>
+
+    <iframe name="contentFrame" width="100%" height="500px"></iframe>
+
+</body>
 </html>
 ```
 
@@ -161,6 +165,10 @@ menu.html
 ```
 
 ## ✅ 8. Run Project
+
+* Keep the mysql connector jar under lib in WEB-INF under webapp only then will it work
+* In case you think everything is right, then please go to project on the menu bar and clean all projects
+* the way you add mysql connector to the lib folder is to right click, select import, and select general-> file system and then select the folder which has the jar file and next. You will then be able to select the jar file and add it to the lib folder
 
 1. Right-click project → Run on Server
 2. Open:
