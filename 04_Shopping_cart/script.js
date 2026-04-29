@@ -9,7 +9,7 @@ function saveCart(cart) {
 }
 
 // Add a book to the cart
-function addToCart(title, price) {
+function addToCart(title, price) {  
     var cart = getCart();
     cart.push({ title: title, price: price });
     saveCart(cart);
