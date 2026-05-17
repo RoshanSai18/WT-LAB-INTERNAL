@@ -12,18 +12,18 @@ button.addEventListener("click", function (e) {
     if (uname.value === "" || pass.value === "" || confirm.value === "") {
         alert("Please fill in all fields");
     }
-    if (uname.value.length < 5) {
+    if (uname.value.length < 5) { // document.getElementById("id").value
         alert("Username must be at least 5 characters long");
     }
     if (pass.value !== confirm.value) {
-        alert("Passwords do not match");
+        alert("Passwords do not match"); 
     }   
     if (pass.value.length < 8) {
         alert("Password must be at least 8 characters long");
     }
-    if(uname.value.length >=5 && pass.value == confirm.value && pass.value.length>=8){
+    if(uname.value.length >=5 && pass.value == confirm.value && pass.value.length>=8){ // Right credentials - window.location.href  = "dynamic_content.html"
         console.log("Registration successful");
         window.location.href = "dynamic_content.html";
     }
-    form.reset();
+    form.reset(); // if the registration is unsuccessful then the form should reset for users to have a better experience
 });
