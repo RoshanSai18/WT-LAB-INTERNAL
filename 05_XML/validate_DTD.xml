@@ -1,0 +1,16 @@
+<!DOCTYPE BookCatalog [
+  <!ELEMENT BookCatalog (Book+)>
+  <!ELEMENT Book (Title, Author+, Genre, Price, Availability)>
+  <!ATTLIST Book id ID #REQUIRED>
+
+  <!ELEMENT Title (#PCDATA)>
+  <!ELEMENT Author (#PCDATA)>
+  <!ELEMENT Genre (#PCDATA)>
+
+  <!ELEMENT Price (#PCDATA)>
+  <!ATTLIST Price currency CDATA #REQUIRED>
+
+  <!ELEMENT Availability (Quantity)>
+  <!ATTLIST Availability status CDATA #REQUIRED>
+  <!ELEMENT Quantity (#PCDATA)>
+]>
